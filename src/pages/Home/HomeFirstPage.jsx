@@ -7,7 +7,7 @@ const HomeFirstPage = () => {
       <img src={myImage} className="h-80 rounded-full"></img>
       <div className="flex flex-col justify-center items-center">
         <p className="text-6xl tablet:text-5xl">JAYCEE BAUTISTA</p>
-        <p className="text-2xl tracking-[15px] tablet:text-xl tablet:tracking-[10px]">
+        <p className="text-2xl tracking-[15px] tablet:text-xl tablet:tracking-[5px]">
           FRONT-END DEVELOPER
         </p>
       </div>
