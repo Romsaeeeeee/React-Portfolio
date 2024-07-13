@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaTelegram } from "react-icons/fa";
 
 const links = [
   {
@@ -12,25 +12,23 @@ const links = [
 
 const MenuPage = () => {
   return (
-    <div className="relative h-full w-full flex justify-center items-center gap-60">
-      <p className="text-xl font-semibold absolute top-[280px] left-[340px] -rotate-90">
-        MENU
-      </p>
-      <div className="flex flex-col justify-start items-start gap-4">
+    <div className="h-full w-full flex justify-center items-center gap-60 tablet:flex-col tablet:gap-0">
+      <div className="flex flex-col justify-start items-start gap-4 tablet:items-center">
         {links &&
           links.map((item, index) => (
             <div key={index}>
-              <p className="text-6xl text-black font-semibold">{item?.label}</p>
+              <p className="text-6xl text-black font-bold">{item?.label}</p>
             </div>
           ))}
       </div>
-      <div className="flex flex-col justify-end items-start gap-5 pt-36 text-xl font-semibold">
+      <div className="flex flex-col justify-end items-start gap-5 pt-36 text-xl font-semibold  tablet:items-center">
         <p>jayceebautista0929@gmail.com</p>
-        <p>+639-123-919-789</p>
+        <p>+63 912-3919-789</p>
         <div className="flex justify-center items-center gap-4">
           <FaInstagram />
           <FaFacebook />
           <FaGithub />
+          <FaTelegram />
         </div>
       </div>
     </div>
