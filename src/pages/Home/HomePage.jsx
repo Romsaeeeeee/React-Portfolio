@@ -3,7 +3,7 @@ import HomeSecondPage from "./HomeSecondPage";
 
 const HomePage = () => {
   return (
-    <div className="w-full h-full ">
+    <div className="w-full h-full">
       <HomeFirstPage />
       <HomeSecondPage />
     </div>
