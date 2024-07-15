@@ -4,7 +4,7 @@ import MenuPage from "./pages/MenuPage";
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden no-scrollbar">
-      <MenuPage />
+      {/* <MenuPage /> */}
       <HomePage />
     </div>
   );
