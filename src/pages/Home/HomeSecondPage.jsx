@@ -44,7 +44,7 @@ const HomeSecondPage = () => {
           </div>
         </div>
       </div>
-      <Footer label="Jaycee" />
+      <Footer />
     </div>
   );
 };
