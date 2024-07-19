@@ -44,7 +44,14 @@ const HomeSecondPage = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer
+        label1="ABOUT"
+        label2="PROJECTS"
+        label3="CONTACT"
+        path1="/about"
+        path2="/projects"
+        path3="/contact"
+      />
     </div>
   );
 };

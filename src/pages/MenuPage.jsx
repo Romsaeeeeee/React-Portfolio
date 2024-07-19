@@ -1,4 +1,5 @@
 import { FaFacebook, FaGithub, FaInstagram, FaTelegram } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const links = [
   {
@@ -10,14 +11,20 @@ const links = [
   { path: "/contact", label: "CONTACT" },
 ];
 
-const MenuPage = () => {
+const MenuPage = ({ onLinkClick }) => {
   return (
     <div className="h-full w-full flex justify-center items-center gap-60 tablet:flex-col tablet:gap-0">
       <div className="flex flex-col justify-start items-start gap-4 tablet:items-center">
         {links &&
           links.map((item, index) => (
             <div key={index}>
-              <p className="text-6xl text-black font-bold">{item?.label}</p>
+              <NavLink
+                onClick={onLinkClick}
+                to={item?.path}
+                className="text-6xl text-black font-bold"
+              >
+                {item?.label}
+              </NavLink>
             </div>
           ))}
       </div>
