@@ -29,7 +29,53 @@ export default {
       // '2xl': { min: '1536px' },
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        },
+        slideInBottom: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        scaleUp: {
+          "0%": { transform: "scale(0.5)" },
+          "100%": { transform: "scale(1)" },
+        },
+        wave: {
+          "0%": { transform: "rotate(0.0deg)" },
+          "10%": { transform: "rotate(14.0deg)" },
+          "20%": { transform: "rotate(-8.0deg)" },
+          "30%": { transform: "rotate(14.0deg)" },
+          "40%": { transform: "rotate(-4.0deg)" },
+          "50%": { transform: "rotate(10.0deg)" },
+          "60%": { transform: "rotate(0.0deg)" },
+          "100%": { transform: "rotate(0.0deg)" },
+        },
+        slideInFromLeft: {
+          "0%": { transform: "translateX(-100%)", opacity: 0 },
+          "100%": { transform: "translateX(0)", opacity: 1 },
+        },
+      },
+      animation: {
+        slideInFromLeft: "slideInFromLeft 1s ease-in-out forwards",
+        fadeIn: "fadeIn 1s ease-in-out",
+        slideInLeft: "slideInLeft 1s ease-in-out",
+        slideInRight: "slideInRight 1s ease-in-out",
+        slideInBottom: "slideInBottom 1s ease-in-out",
+        scaleUp: "scaleUp 1s ease-in-out",
+        wave: "wave 2s linear infinite",
+      },
+    },
     fontFamily: {
       "League-Gothic": ["League Gothic", "sans-serif"],
     },

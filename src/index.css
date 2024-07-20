@@ -26,3 +26,7 @@
 /* ::-webkit-scrollbar-thumb:hover {
   background: #555;
 } */
+
+.flip-horizontal {
+  transform: rotateY(180deg);
+}
