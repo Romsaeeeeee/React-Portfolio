@@ -32,13 +32,16 @@ const HomeSecondPage = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-5 px-40 tablet:w-full tablet:px-10 tablet:items-center">
           <p className="text-4xl font-bold">My Skills</p>
-          <div className="flex justify-center items-center gap-5 tablet:flex-col">
+          <div className="flex justify-center items-center gap-5 tablet:flex-col animate-slideInFromLeft"
+          >
             {skills &&
               skills.map((item, index) => (
                 <Skills
                   key={index}
                   icon={<img src={item?.image} className="h-fit w-full" />}
                   label={item?.label}
+                  className="animate-slideInFromLeft"
+
                 />
               ))}
           </div>

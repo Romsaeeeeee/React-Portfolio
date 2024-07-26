@@ -4,7 +4,7 @@ export default {
   theme: {
     screens: {
       // mobile: '350px',
-      // // => @media (min-width: 640px) { ... }
+      // // => @media (min-width: 640px) { ... } 
 
       // tablet: '640px',
       // // => @media (min-width: 640px) { ... }
@@ -44,8 +44,8 @@ export default {
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
         slideInBottom: {
-          "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(0)" },
+          "0%": { transform: "translateY(100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
         scaleUp: {
           "0%": { transform: "scale(0.5)" },
@@ -65,13 +65,18 @@ export default {
           "0%": { transform: "translateX(-100%)", opacity: 0 },
           "100%": { transform: "translateX(0)", opacity: 1 },
         },
+        breathingGlow: {
+          "0%, 100%": { boxShadow: "0 0 15px rgba(255, 255, 255, 0.8)" },
+          "50%": { boxShadow: "0 0 30px rgba(255, 255, 255, 1)" },
+        },
       },
       animation: {
+        breathingGlow: "breathingGlow 2s ease-in-out infinite",
         slideInFromLeft: "slideInFromLeft 1s ease-in-out forwards",
         fadeIn: "fadeIn 1s ease-in-out",
-        slideInLeft: "slideInLeft 1s ease-in-out",
+        slideInLeft: "slideInLeft 2s ease-in-out",
         slideInRight: "slideInRight 1s ease-in-out",
-        slideInBottom: "slideInBottom 1s ease-in-out",
+        slideInBottom: "slideInBottom 0.8s ease-in",
         scaleUp: "scaleUp 1s ease-in-out",
         wave: "wave 2s linear infinite",
       },

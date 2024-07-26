@@ -1,6 +1,7 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom";
@@ -25,6 +26,8 @@ const router = createBrowserRouter(
       <Route path="contact" element={<ContactMe />}></Route>
       {/* PROJECT PAGE */}
       <Route path="projects" element={<ContactMe />}></Route>
+      {/* Default Page */}
+      <Route path="*" element={<Navigate to="home" />}></Route>
     </Route>
   )
 );
